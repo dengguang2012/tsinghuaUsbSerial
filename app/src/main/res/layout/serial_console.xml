@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/demoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/app_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#eeeeee" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textBtnDTR"
+            android:id="@+id/checkBoxDTR" />
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textBtnRTS"
+            android:id="@+id/checkBoxRTS" />
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/demoTitle"
+            android:layout_height="1dip"
+            android:background="#eeeeee" />
+
+        <ScrollView
+            android:id="@+id/demoScroller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/consoleText"
+                android:textIsSelectable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace" />
+        </ScrollView>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/sendText"
+            android:layout_width="0dp"
+            android:layout_weight="2.0"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
+        <Button
+            android:id="@+id/buttonSendText"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:text="Send" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</LinearLayout>
